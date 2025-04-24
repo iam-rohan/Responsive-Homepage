@@ -8,9 +8,131 @@
 /* Root Variables */
 :root {
   --primary-color: #ffff;
-  --secondary-color: #1265ad;
-
+  --secondary-color: #4595da;
   --text-color: #1a1a1a;
-
   --font-main: "Poppins", sans-serif;
+  --font-secondary: "Playfair Display", serif;
+}
+
+/* Base styles */
+body {
+  font-family: var(--font-main);
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+
+/* Headings */
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3rem;
+  font-family: var(--font-secondary);
+}
+
+h3 {
+  font-size: 2rem;
+  font-family: var(--font-secondary);
+  font-weight: 300;
+}
+
+.my-description {
+  font-size: 1em;
+}
+
+/* Layout */
+
+main {
+  position: relative;
+  padding: 3rem 8rem;
+  z-index: 1;
+}
+
+main::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: var(--secondary-color);
+  clip-path: polygon(0 0, 100% 0, 100% 25%, 0% 45%);
+  z-index: -1;
+}
+
+header {
+  height: 100vh;
+}
+
+.about-me-container {
+  display: flex;
+  align-items: center;
+  padding: 0 5em;
+  height: 80%;
+}
+
+.photo-name {
+  position: relative;
+  background-image: url(../assets/profile-pic.png);
+  background-position: center;
+  background-size: cover;
+  max-width: 50%;
+  width: 40%;
+  height: 100%;
+  box-shadow: 20px 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.name {
+  font-family: var(--font-secondary);
+  font-weight: 400;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  text-align: center;
+  padding: 5px 10px;
+  color: white;
+  font-size: clamp(1.2rem, 3.5vw, 2.5em);
+  border-radius: 5px;
+}
+
+.about-socials {
+  width: 60%;
+  height: 90%;
+  background-color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 1.8em;
+  overflow: auto;
+  box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Social links */
+.socials {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.7em;
+}
+
+.icons {
+  font-size: 1.8em;
+  color: var(--text-color);
+}
+
+a {
+  text-decoration: none;
+  transition: transform 0.2s ease-in-out;
+}
+
+a:hover {
+  transform: scale(1.1);
+}
+
+a:active {
+  transform: scale(0.9);
+}
+
+img {
+  width: 300px;
+  height: 300px;
 }
