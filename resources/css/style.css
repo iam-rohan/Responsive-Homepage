@@ -255,3 +255,113 @@ img {
 .footer-socials a {
   font-size: 1.4em;
 }
+
+.mdi-email {
+  white-space: nowrap;
+}
+
+/* MEDIA QUERY */
+
+@media (max-width: 1024px) {
+  /* About Me Section  */
+  main::before {
+    clip-path: polygon(0 0, 100% 0, 100% 10%, 0% 30%);
+  }
+
+  .about-me-container {
+    display: block;
+    padding-top: 5rem;
+    height: 100vh;
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+  }
+
+  .photo-name {
+    display: block;
+    float: left;
+    position: relative;
+    width: 40%;
+    height: 400px;
+    margin: -20px 30px -50px -20px;
+    shape-outside: inset(0 0 0 0);
+    box-shadow: 20px 10px 25px rgba(0, 0, 0, 0.15);
+    top: -90px;
+  }
+
+  .profile-pic {
+    height: 80%;
+  }
+
+  .name {
+    font-size: clamp(1rem, 4vw, 4em);
+    position: absolute;
+    top: 0.8em;
+    left: 10em;
+    width: auto;
+    margin: 0;
+    padding: 5px;
+    white-space: nowrap;
+  }
+
+  .about-socials {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 1.5em;
+    box-shadow: 0 2px 12px 1px rgba(0, 0, 0, 0.178);
+    text-align: justify;
+    overflow: visible;
+    background-color: var(--primary-color);
+  }
+
+  .socials {
+    clear: left;
+    justify-content: flex-start;
+    padding-top: 1rem;
+  }
+
+  /* Work Section */
+
+  .work-section {
+    padding: 0em 5em 5em 5em;
+  }
+
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5em;
+    margin-top: 1em;
+  }
+
+  .project-container {
+    text-align: center;
+  }
+
+  /* Contact Section */
+
+  .contacts-container {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    padding: 3em 3em 3em 3em;
+    font-size: 1.2em;
+  }
+
+  .footer-image {
+    margin-top: 3em;
+    width: 45%;
+    height: 30em;
+    object-fit: cover;
+    box-shadow: 20px 10px 25px rgba(0, 0, 0, 0.15);
+  }
+
+  .footer-socials a {
+    font-size: 1.2em;
+  }
+
+  .mdi-email {
+    white-space: nowrap;
+  }
+}
